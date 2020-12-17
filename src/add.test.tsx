@@ -15,7 +15,7 @@ test('renders todo', () => {
   fireEvent.change(input, { target: { value: 'do test' }})
   fireEvent.click(button);
 
-  expect(handleAddClick).toBeCalledWith({ id: 1, title: 'do test' })
+  expect(handleAddClick).toBeCalledWith('do test')
 
   fireEvent.change(input, { target: { value: '' }})
   fireEvent.click(button);
