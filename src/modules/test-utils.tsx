@@ -1,17 +1,13 @@
-import React from 'react';
-import ListContainer from './listContainer';
 import { QueryClient, QueryClientProvider } from "react-query";
 
 const queryClient = new QueryClient();
 
-function App() {
+const wrapper: React.FC = ({ children }) => {
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="App">
-        <ListContainer />
-      </div>
+      {children}
     </QueryClientProvider>
-  );
+  )
 }
 
-export default App;
+export { wrapper }

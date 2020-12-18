@@ -6,6 +6,7 @@ import todoList from './../../fixtures/todo/list.json'
 test('todo store', () => {
   const { result } = renderHook(() => todoStore())
 
+
   expect(result.current.todos).toHaveLength(0)
   act(() => {
     result.current.add(todoList[0])

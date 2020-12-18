@@ -8,14 +8,13 @@ interface IList {
   handleClickRemove: (id: number) => void
 }
 
-
 function List(props: IList) {
   const { todos, handleClickRemove } = props;
+
   return (
-    <>
+    <div>
       {todos.map(todo => <Todo key={todo.id} todo={todo} handleClickRemove={handleClickRemove}/>)}
-    </>
+    </div>
   )
 }
-
 export default List
